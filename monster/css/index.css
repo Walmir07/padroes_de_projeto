@@ -1,0 +1,15 @@
+.centerContent {
+    text-align: center;
+}
+
+.lifeBarStyle {
+    height: 30px;
+    width: 500px;
+    background-color: green;
+    margin: auto;
+}
+
+.styleButton {
+    height: 30px;
+    width: 100px;
+}
