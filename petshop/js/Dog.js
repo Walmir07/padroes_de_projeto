@@ -1,21 +1,15 @@
 class Dog {
 
-    #varPrivada;
-
-    constructor(newName = "") {
+    constructor() {
+        this.name = "Bruce Twist"
         this.life = 500;
-        this.dogName = newName;
+        this.isDead = false;
     }
 
-    setVarPrivada(valor){
-        this.#varPrivada = valor;
-    }
-
-    getVarPrivada(){
-        return this.#varPrivada;
+    receiveDamage(damage) {
+        this.life -= damage;
+        this.life = Math.max(this.life, 0)
+        this.isDead = this.life == 0;
     }
 
 }
-
-let cachorro1 = new Dog();
-console.log(cachorro1.dogName);
