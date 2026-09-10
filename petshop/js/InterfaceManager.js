@@ -10,15 +10,15 @@ class InterfaceManager{
     }
 
     setHitDogFace() {
-        this.dogFace.src = "/images/sad-dog.png";
+        this.dogFace.src = "./images/sad-dog.png";
     }
 
     setDeadDogFace() {
-        this.dogFace.src = "/images/dead-dog.png";
+        this.dogFace.src = "./images/dead-dog.png";
     }
 
     setHappyDogFace() {
-        this.dogFace.src = "/images/happy-dog.png";
+        this.dogFace.src = "./images/happy-dog.png";
     }
 
 }
