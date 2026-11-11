@@ -1,4 +1,4 @@
-class State {
+export class State {
 
     play(){}
 

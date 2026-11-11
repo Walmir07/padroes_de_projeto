@@ -1,7 +1,9 @@
-class Player {
+import { StateManager } from "./StateManager.js"
+
+export class Player {
 
     constructor() {
-        this.stateManager = new this.stateManager();
+        this.stateManager = new StateManager(this);
     }
 
     play() {

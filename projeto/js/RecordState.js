@@ -1,15 +1,19 @@
-class RecordState extends State{
+import { State } from "./State.js";
+import { StopState } from "./StopState.js";
 
-    play(){
-        console.log("Cannot record while redording!!!")
+export class RecordState extends State {
+
+    play() {
+        console.log("Cannot play while recording!!!");
     }
 
-    record(){
-        console.log("Is Recording!!!")
+    record() {
+        console.log("Already Recording!!!");
     }
 
-    stop(){
-        console.log("Is Stopped!!!")
+    stop(manager) {
+        console.log("Is Stopped!!!");
+        manager.changeState(new StopState());
     }
-    
+
 }
