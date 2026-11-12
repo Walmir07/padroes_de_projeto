@@ -1,3 +1,25 @@
+let player = new Player();
+
+function play(){
+    player.play();
+}
+
+function record(){
+    player.record();
+}
+
+function stop(){
+    player.stop();
+}
+
+buttonPlay.onclick = play;
+buttonRecord.onclick = record;
+buttonStop.onclick = stop;
+
+// Código antigo sem padrão //
+
+/* 
+
 let isStopped = true;
 let isPlaying = false;
 let isRecording = false;
@@ -47,4 +69,6 @@ function stop() {
 
 buttonPlay.onclick = play;
 buttonRecord.onclick = record;
-buttonStop.onclick = stop;
+buttonStop.onclick = stop; 
+
+*/

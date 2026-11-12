@@ -1,19 +1,22 @@
-import { State } from "./State.js";
-import { StopState } from "./StopState.js";
-
-export class RecordState extends State {
+class RecordState extends State {
 
     play() {
         console.log("Cannot play while recording!!!");
     }
 
     record() {
-        console.log("Already Recording!!!");
+        if(this.stateManager.currentState instanceof RecordState) {
+            console.log("Already Recording!!!");
+        }
+        else {
+            this.stateManager.setState(new RecordState(this.stateManager));
+            console.log("Is Recording!!!");
+        }
     }
 
-    stop(manager) {
+    stop() {
         console.log("Is Stopped!!!");
-        manager.changeState(new StopState());
+        this.stateManager.setState(new StopState(this.stateManager));
     }
 
 }

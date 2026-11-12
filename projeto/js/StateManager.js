@@ -1,24 +1,23 @@
-import { StopState } from './StopState.js';
+class StateManager {
 
-export class StateManager {
-    constructor(player){
-        this.player = player;
-        this.currentState = new StopState();
+    constructor() {
+        this.currentState = new StopState(this);
     }
 
-    changeState(newState){
-        this.currentState = newState;
+    setState(state) {
+        this.currentState = state;
     }
 
-    play(){
-        this.currentState.play(this);
+    play() {
+        this.currentState.play();
     }
 
-    record(){
-        this.currentState.record(this);
+    record() {
+        this.currentState.record();
     }
 
-    stop(){
-        this.currentState.stop(this);
+    stop() {
+        this.currentState.stop();
     }
+
 }
